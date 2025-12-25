@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Christmas Gift for You, Lia ❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&family=Crimson+Text:wght@400;600&family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, #0a1a14 0%, #1a0a14 100%);
+            color: #e8f4f8;
+            line-height: 1.8;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(220, 53, 69, 0.08) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(25, 135, 84, 0.08) 0%, transparent 20%),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="none"/><path d="M40,40 Q100,10 160,40 T200,100 Q170,160 100,190 T0,100 Q30,40 100,10 T200,40" fill="none" stroke="rgba(220,53,69,0.05)" stroke-width="2"/></svg>');
+        }
+        
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .snowflake {
+            position: absolute;
+            background-color: #a8e6cf;
+            border-radius: 50%;
+            opacity: 0.6;
+            box-shadow: 0 0 10px #a8e6cf;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Header */
+        .christmas-header {
+            text-align: center;
+            padding: 60px 0 40px;
+            position: relative;
+        }
+        
+        .christmas-header h1 {
+            font-family: 'Mountains of Christmas', cursive;
+            font-size: 4.5rem;
+            color: #ffd166;
+            margin-bottom: 20px;
+            text-shadow: 0 0 25px rgba(255, 209, 102, 0.5),
+                         3px 3px 0 #dc3545,
+                         -3px -3px 0 #dc3545;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { 
+                text-shadow: 0 0 10px rgba(255, 209, 102, 0.5), 
+                            3px 3px 0 #dc3545,
+                            -3px -3px 0 #dc3545; 
+            }
+            to { 
+                text-shadow: 0 0 40px rgba(255, 209, 102, 0.8), 
+                            5px 5px 0 #dc3545,
+                            -5px -5px 0 #dc3545,
+                            0 0 25px #ff6b6b; 
+            }
+        }
+        
+        .header-subtitle {
+            font-size: 1.5rem;
+            color: #a8e6cf;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-family: 'Dancing Script', cursive;
+            text-shadow: 0 0 15px rgba(168, 230, 207, 0.5);
+        }
+        
+        /* Garland Decoration */
+        .garland {
+            height: 30px;
+            margin: 30px auto;
+            position: relative;
+            width: 80%;
+            max-width: 700px;
+        }
+        
+        .garland-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, 
+                #dc3545 0%, 
+                #198754 20%, 
+                #ffd166 40%, 
+                #0dcaf0 60%, 
+                #9c36b5 80%, 
+                #dc3545 100%);
+            border-radius: 2px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        }
+        
+        .garland-light {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            top: -8px;
+            animation: lightTwinkle 1.5s infinite alternate;
+        }
+        
+        @keyframes lightTwinkle {
+            0% { transform: scale(0.8); opacity: 0.7; filter: brightness(0.8); }
+            100% { transform: scale(1.2); opacity: 1; filter: brightness(1.2); }
+        }
+        
+        /* Letter Container */
+        .letter-container {
+            background: linear-gradient(to bottom, #1e1e2e, #2d2d44);
+            color: #e8f4f8;
+            border-radius: 20px;
+            padding: 60px 50px;
+            box-shadow: 
+                0 25px 70px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 40px rgba(220, 53, 69, 0.4);
+            position: relative;
+            margin-bottom: 50px;
+            border: 3px solid #dc3545;
+            border-image: linear-gradient(45deg, #dc3545, #ffd166, #198754, #dc3545) 1;
+        }
+        
+        .letter-container::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px dashed rgba(220, 53, 69, 0.3);
+            border-radius: 15px;
+            pointer-events: none;
+        }
+        
+        .letter-date {
+            text-align: right;
+            font-style: italic;
+            color: #a8e6cf;
+            margin-bottom: 40px;
+            border-bottom: 2px solid rgba(220, 53, 69, 0.5);
+            padding-bottom: 15px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #ffd166;
+        }
+        
+        .letter-salutation {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ffd166;
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 2px 2px 0 rgba(220, 53, 69, 0.5);
+        }
+        
+        .letter-content {
+            font-size: 1.3rem;
+            line-height: 1.9;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M20,20 Q50,5 80,20 T100,50 Q85,80 50,95 T0,50 Q15,20 50,5 T100,20" fill="none" stroke="rgba(220,53,69,0.15)" stroke-width="1"/></svg>');
+        }
+        
+        .letter-content p {
+            margin-bottom: 25px;
+            text-align: justify;
+            position: relative;
+            padding-left: 10px;
+        }
+        
+        .letter-content p::before {
+            content: '❄️';
+            position: absolute;
+            left: -25px;
+            top: 0;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+        
+        .highlighted-text {
+            background: linear-gradient(120deg, rgba(255, 209, 102, 0.2) 0%, rgba(220, 53, 69, 0.2) 100%);
+            padding: 3px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #ffd166;
+            border-left: 3px solid #dc3545;
+            text-shadow: 0 0 5px rgba(255, 209, 102, 0.3);
+        }
+        
+        .heart-in-text {
+            color: #dc3545;
+            display: inline-block;
+            animation: heartbeat 1.5s infinite;
+            text-shadow: 0 0 15px rgba(255, 107, 107, 0.6);
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        
+        .letter-closing {
+            margin-top: 50px;
+            text-align: right;
+            padding-top: 30px;
+            border-top: 2px solid rgba(220, 53, 69, 0.5);
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #ffd166;
+            margin-top: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 0 rgba(220, 53, 69, 0.5),
+                         0 0 15px rgba(255, 209, 102, 0.3);
+        }
+        
+        .envelope-seal {
+            position: absolute;
+            top: -30px;
+            right: 50px;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle at 30% 30%, #dc3545, #9c0d22);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffd166;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 25px rgba(220, 53, 69, 0.7),
+                        inset 0 2px 5px rgba(255, 255, 255, 0.2);
+            border: 4px solid #ffd166;
+            animation: sealGlow 2s infinite alternate;
+        }
+        
+        @keyframes sealGlow {
+            0% { 
+                box-shadow: 0 5px 20px rgba(220, 53, 69, 0.7),
+                           inset 0 2px 5px rgba(255, 255, 255, 0.2); 
+            }
+            100% { 
+                box-shadow: 0 5px 35px rgba(220, 53, 69, 0.9),
+                           inset 0 2px 5px rgba(255, 255, 255, 0.2),
+                           0 0 25px #ffd166; 
+            }
+        }
+        
+        /* Ornaments Section */
+        .ornaments-section {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .ornament {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5),
+                       inset 0 -5px 15px rgba(0, 0, 0, 0.3);
+            animation: ornamentFloat 4s infinite ease-in-out;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .ornament:hover {
+            transform: scale(1.2) rotate(15deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7),
+                       inset 0 -5px 15px rgba(0, 0, 0, 0.3),
+                       0 0 30px currentColor;
+        }
+        
+        @keyframes ornamentFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-25px) rotate(10deg); }
+        }
+        
+        .ornament-1 {
+            background: radial-gradient(circle at 30% 30%, #dc3545, #7a1c2d);
+            color: #ffd166;
+            animation-delay: 0s;
+        }
+        
+        .ornament-2 {
+            background: radial-gradient(circle at 30% 30%, #198754, #0d5037);
+            color: #a8e6cf;
+            animation-delay: 0.5s;
+        }
+        
+        .ornament-3 {
+            background: radial-gradient(circle at 30% 30%, #ffd166, #b59447);
+            color: #dc3545;
+            animation-delay: 1s;
+        }
+        
+        .ornament-4 {
+            background: radial-gradient(circle at 30% 30%, #0dcaf0, #087990);
+            color: #e8f4f8;
+            animation-delay: 1.5s;
+        }
+        
+        /* Christmas Tree */
+        .tree-container {
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        .tree {
+            display: inline-block;
+            position: relative;
+            filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.5));
+        }
+        
+        .tree-layer {
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 90px solid #0d5037;
+            margin-bottom: -45px;
+            position: relative;
+        }
+        
+        .tree-layer:nth-child(2) {
+            border-left: 80px solid transparent;
+            border-right: 80px solid transparent;
+            border-bottom: 110px solid #157347;
+        }
+        
+        .tree-layer:nth-child(3) {
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 130px solid #198754;
+        }
+        
+        .tree-trunk {
+            width: 40px;
+            height: 70px;
+            background: linear-gradient(to right, #5d4037, #3e2723);
+            margin: 0 auto;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .tree-light {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            animation: twinkle 2s infinite alternate;
+            filter: drop-shadow(0 0 8px currentColor);
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(0.8); filter: drop-shadow(0 0 5px currentColor); }
+            100% { opacity: 1; transform: scale(1.3); filter: drop-shadow(0 0 15px currentColor); }
+        }
+        
+        .tree-star {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            color: #ffd166;
+            text-shadow: 0 0 25px #ffd166;
+            animation: starSpin 4s infinite linear;
+            filter: drop-shadow(0 0 10px #ffd166);
+        }
+        
+        @keyframes starSpin {
+            0% { transform: translateX(-50%) rotate(0deg); }
+            100% { transform: translateX(-50%) rotate(360deg); }
+        }
+        
+        /* Footer */
+        .christmas-footer {
+            text-align: center;
+            padding: 50px 0;
+            color: #ffd166;
+            font-size: 1.2rem;
+            border-top: 2px solid rgba(220, 53, 69, 0.5);
+            margin-top: 40px;
+            position: relative;
+            background: linear-gradient(to right, transparent, rgba(220, 53, 69, 0.1), transparent);
+        }
+        
+        .final-message {
+            font-family: 'Mountains of Christmas', cursive;
+            font-size: 2.8rem;
+            color: #ffd166;
+            margin: 25px 0;
+            text-shadow: 0 0 25px rgba(255, 209, 102, 0.6),
+                         3px 3px 0 #dc3545;
+        }
+        
+        .santa-hat {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4rem;
+            color: #dc3545;
+            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+            animation: hatWiggle 3s infinite alternate;
+            filter: drop-shadow(0 0 10px #dc3545);
+        }
+        
+        @keyframes hatWiggle {
+            0% { transform: translateX(-50%) rotate(-5deg); }
+            100% { transform: translateX(-50%) rotate(5deg); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .christmas-header h1 {
+                font-size: 3.2rem;
+            }
+            
+            .letter-container {
+                padding: 40px 25px;
+            }
+            
+            .letter-content {
+                font-size: 1.1rem;
+            }
+            
+            .ornaments-section {
+                gap: 25px;
+            }
+            
+            .ornament {
+                width: 85px;
+                height: 85px;
+                font-size: 2.2rem;
+            }
+        }
+        
+        /* Background Music Indicator */
+        .music-note {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 1.8rem;
+            color: #ffd166;
+            opacity: 0.7;
+            animation: noteFloat 3s infinite ease-in-out;
+            filter: drop-shadow(0 0 5px #ffd166);
+            z-index: 100;
+        }
+        
+        @keyframes noteFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+        
+        /* Candle */
+        .candle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 30px;
+            height: 60px;
+            background: linear-gradient(to bottom, #ffd166, #ffaa00, #ff8800);
+            border-radius: 5px;
+            z-index: 100;
+            filter: drop-shadow(0 0 15px rgba(255, 209, 102, 0.6));
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .candle::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 25px;
+            background: linear-gradient(to bottom, #dc3545, #ff8800);
+            border-radius: 50% 50% 20% 20%;
+            animation: flicker 1.5s infinite alternate;
+            box-shadow: 0 0 25px #dc3545;
+            filter: drop-shadow(0 0 10px #dc3545);
+        }
+        
+        @keyframes flicker {
+            0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+            50% { transform: translateX(-50%) scale(1.1); opacity: 1; }
+        }
+        
+        /* Starlight Effect */
+        .starlight {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .star {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: starTwinkle 3s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <!-- Snowflakes -->
+    <div class="snowflakes" id="snowflakes"></div>
+    
+    <!-- Starlight Effect -->
+    <div class="starlight" id="starlight"></div>
+    
+    <!-- Candle -->
+    <div class="candle"></div>
+    
+    <!-- Music Indicator -->
+    <div class="music-note">
+        <i class="fas fa-music"></i>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Header -->
+        <div class="christmas-header">
+            <h1>My Christmas Gift for You</h1>
+            <p class="header-subtitle">67777777777777777777777 ❤️</p>
+            
+            <!-- Garland -->
+            <div class="garland">
+                <div class="garland-line"></div>
+            </div>
+            
+            <!-- Christmas Tree -->
+            <div class="tree-container">
+                <div class="tree-star">★</div>
+                <div class="tree">
+                    <div class="tree-layer"></div>
+                    <div class="tree-layer"></div>
+                    <div class="tree-layer"></div>
+                    <div class="tree-trunk"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- The Letter -->
+        <div class="letter-container">
+            <div class="envelope-seal">
+                <i class="fas fa-heart"></i>
+            </div>
+            
+            <div class="letter-date">
+                Christmas, 2025
+            </div>
+            
+            <div class="letter-salutation">
+                My cute and beautiful Lia,
+            </div>
+            
+            <div class="letter-content">
+                <p>This is our first Christmas together and I do hope you have a great time with your family ! </span>.</p>
+                
+                <p>While ing the first Christmas together, It will for sure not being the last one. I do truely thankyou for being such a supportive and understanding partner.</p>
+                
+                <p>They say Christmas is all about gifts, but having you in my life is the greatest gift I've received this year. And truely I am thankful for having you in my life <span class="heart-in-text">❤️</span></p>
+                
+                <p>I hope I can be visiting you soon and spend more time with you. I am sorry I piss you off a lot and I hope you know I love you so much</p>
+                
+                <p>I do think Chrismas is about appreciation. While I have mention it a lot I do think I am luck to have you in my life and I truely appreciate you a lot for everything you have done for me.</p>
+                
+                <p>Next Christmas, I am sure we will still be celebrating together and I am looking forward to it a lot. I love you more,</p>
+                
+                <p>Until then, please let me know if I did anything wrong. As I do feel like I piss you off a lot and I hope you know I love you so much. Here comes the offical <span class="highlighted-text">Merry Christmas </span> I look forward to loving you more and more.</p>
+            </div>
+            
+            <div class="letter-closing">
+                <p>With all my love, my cute 67</p>
+                <div class="signature">Monte</div>
+            </div>
+        </div>
+        
+        <!-- Christmas Ornaments -->
+        <div class="ornaments-section">
+            <div class="ornament ornament-1" title="My Love for You">❤️</div>
+            <div class="ornament ornament-2" title="Our First Christmas">🎄</div>
+            <div class="ornament ornament-3" title="Bright Future">🌟</div>
+            <div class="ornament ornament-4" title="Endless Joy">🎁</div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="christmas-footer">
+            <div class="santa-hat">🎅</div>
+            <p class="final-message">Merry Christmas, my love ❤️</p>
+            <p>Have a great holiday trip with your family !</p>
+            <p>The one who loves you more, Monte</p>
+            <div id="christmasCountdown" style="margin-top: 20px; font-size: 1.3rem; color: #a8e6cf; text-shadow: 0 0 10px rgba(168, 230, 207, 0.3);"></div>
+        </div>
+    </div>
+    
+    <!-- Background Music (Autoplay) -->
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-christmas-is-coming-583.mp3" type="audio/mpeg">
+        <source src="https://assets.mixkit.co/music/preview/mixkit-a-christmas-carol-583.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Create snowflakes
+        function createSnowflakes() {
+            const snowflakesContainer = document.getElementById('snowflakes');
+            const snowflakeCount = 100;
+            
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                
+                // Random size
+                const size = Math.random() * 10 + 2;
+                snowflake.style.width = `${size}px`;
+                snowflake.style.height = `${size}px`;
+                
+                // Random position
+                snowflake.style.left = `${Math.random() * 100}vw`;
+                
+                // Random opacity
+                snowflake.style.opacity = Math.random() * 0.8 + 0.2;
+                
+                // Random animation
+                const duration = Math.random() * 10 + 5;
+                const delay = Math.random() * 5;
+                
+                snowflake.style.animation = `fall ${duration}s linear ${delay}s infinite`;
+                
+                // Random blur
+                snowflake.style.filter = `blur(${Math.random()}px) brightness(${Math.random() * 0.5 + 0.5})`;
+                
+                // Add to container
+                snowflakesContainer.appendChild(snowflake);
+            }
+        }
+        
+        // Create starlight effect
+        function createStarlight() {
+            const starlightContainer = document.getElementById('starlight');
+            const starCount = 30;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random size
+                const size = Math.random() * 3 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                // Random position
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.top = `${Math.random() * 100}vh`;
+                
+                // Random animation
+                star.style.animationDelay = `${Math.random() * 3}s`;
+                star.style.animationDuration = `${Math.random() * 2 + 2}s`;
+                
+                starlightContainer.appendChild(star);
+            }
+        }
+        
+        // Create falling animation for snowflakes
+        function createFallingAnimation() {
+            const keyframes = `
+                @keyframes fall {
+                    0% {
+                        transform: translateY(-100px) rotate(0deg);
+                    }
+                    100% {
+                        transform: translateY(100vh) rotate(360deg);
+                    }
+                }
+                @keyframes starTwinkle {
+                    0% { opacity: 0.3; transform: scale(0.8); }
+                    50% { opacity: 1; transform: scale(1.2); }
+                    100% { opacity: 0.3; transform: scale(0.8); }
+                }
+            `;
+            
+            const style = document.createElement('style');
+            style.textContent = keyframes;
+            document.head.appendChild(style);
+        }
+        
+        // Create garland lights
+        function createGarlandLights() {
+            const garland = document.querySelector('.garland');
+            const garlandWidth = garland.offsetWidth;
+            const lightCount = 15;
+            
+            for (let i = 0; i < lightCount; i++) {
+                const light = document.createElement('div');
+                light.classList.add('garland-light');
+                
+                // Position evenly
+                const position = (i / (lightCount - 1)) * garlandWidth;
+                light.style.left = `${position}px`;
+                
+                // Random color
+                const colors = ['#dc3545', '#ffd166', '#198754', '#0dcaf0', '#9c36b5'];
+                light.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Random animation delay
+                light.style.animationDelay = `${Math.random() * 2}s`;
+                
+                garland.appendChild(light);
+            }
+        }
+        
+        // Create Christmas tree lights
+        function createTreeLights() {
+            const treeLayers = document.querySelectorAll('.tree-layer');
+            const colors = ['#dc3545', '#ffd166', '#198754', '#0dcaf0', '#9c36b5'];
+            
+            treeLayers.forEach((layer, layerIndex) => {
+                const layerRect = layer.getBoundingClientRect();
+                const lightCount = 10 + layerIndex * 4;
+                
+                for (let i = 0; i < lightCount; i++) {
+                    const light = document.createElement('div');
+                    light.classList.add('tree-light');
+                    
+                    // Position lights randomly within the triangle
+                    const posX = Math.random() * (layerRect.width - 30) + 15;
+                    const posY = Math.random() * (layerRect.height - 30) + 15;
+                    
+                    light.style.left = `${posX}px`;
+                    light.style.top = `${posY}px`;
+                    light.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    
+                    // Random twinkle delay
+                    light.style.animationDelay = `${Math.random() * 2}s`;
+                    
+                    layer.appendChild(light);
+                }
+            });
+        }
+        
+        // Ornament click effect
+        document.querySelectorAll('.ornament').forEach(ornament => {
+            ornament.addEventListener('click', function() {
+                const colors = ['#dc3545', '#198754', '#ffd166', '#0dcaf0', '#9c36b5'];
+                const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
+                const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
+                this.style.background = `radial-gradient(circle at 30% 30%, ${randomColor1}, ${randomColor2})`;
+                
+                // Create sparkle effect
+                for (let i = 0; i < 15; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.style.cssText = `
+                        position: absolute;
+                        width: 6px;
+                        height: 6px;
+                        background: #ffd166;
+                        border-radius: 50%;
+                        pointer-events: none;
+                        z-index: 1000;
+                        left: ${this.offsetLeft + this.offsetWidth/2}px;
+                        top: ${this.offsetTop + this.offsetHeight/2}px;
+                        animation: sparkleFly 1.5s ease-out forwards;
+                        filter: drop-shadow(0 0 5px #ffd166);
+                    `;
+                    
+                    document.body.appendChild(sparkle);
+                    
+                    // Remove sparkle after animation
+                    setTimeout(() => sparkle.remove(), 1500);
+                }
+                
+                // Add sparkle animation
+                const sparkleAnimation = `
+                    @keyframes sparkleFly {
+                        0% {
+                            transform: translate(0, 0) scale(1);
+                            opacity: 1;
+                        }
+                        100% {
+                            transform: translate(${Math.random()*120-60}px, ${Math.random()*120-60}px) scale(0);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                
+                const style = document.createElement('style');
+                style.textContent = sparkleAnimation;
+                document.head.appendChild(style);
+            });
+        });
+        
+        // Christmas countdown
+        function updateChristmasCountdown() {
+            const now = new Date();
+            const christmas = new Date(now.getFullYear(), 11, 25); // December 25
+            
+            // If Christmas has passed, set for next year
+            if (now > christmas) {
+                christmas.setFullYear(christmas.getFullYear() + 1);
+            }
+            
+            const timeDiff = christmas - now;
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            
+            const countdownEl = document.getElementById('christmasCountdown');
+            countdownEl.innerHTML = `
+                <i class="fas fa-snowflake" style="color:#a8e6cf"></i> 
+                <strong style="color:#ffd166">${days}</strong> days, 
+                <strong style="color:#ffd166">${hours}</strong> hours, 
+                <strong style="color:#ffd166">${minutes}</strong> minutes until Christmas
+                <i class="fas fa-heart" style="color:#dc3545"></i>
+            `;
+        }
+        
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            createFallingAnimation();
+            createSnowflakes();
+            createStarlight();
+            createGarlandLights();
+            createTreeLights();
+            updateChristmasCountdown();
+            
+            // Update countdown every minute
+            setInterval(updateChristmasCountdown, 60000);
+            
+            // Add welcome message
+            setTimeout(() => {
+                const message = document.createElement('div');
+                message.style.cssText = `
+                    position: fixed;
+                    top:
